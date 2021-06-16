@@ -50,7 +50,7 @@ We implemented algorithm on Pong，Mspacman and Breakout. The gym environments a
 ### Pong
 
 In this game, we set the epsilon decay after each step to be 5e-6, and the epsilon will be 0.01 after 1 million frames. Using the Deep Q-Learning algorithm, it takes **~8 hours** to get the highest score (21 points). We treat the above parameters as standard mode, comparing with different parameters.
- ![](./PongNoFrameskip-v4/pong_compare1.png)
+![](./PongNoFrameskip-v4/pong_compare1.png)
 We compared standard with two other modes. The red line used two hidden layers that the additional layer has 512 neurons linear layer with ReLU activation. For yellow line and dots, agent used the policy at the beginning of a episode, which means the frames dose noting equal zero.
 ![](./PongNoFrameskip-v4/pong_compare2.png)
 

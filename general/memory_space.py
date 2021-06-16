@@ -17,10 +17,10 @@ class Memory:
         """
         self.memory_size = memory_size
         self.current_index = 0
-        self.state = torch.zeros(size=(memory_size, *state_size), dtype=torch.float16)
-        self.state_ = torch.zeros(size=(memory_size, *state_size), dtype=torch.float16)
+        self.state = torch.zeros(size=(memory_size, *state_size), dtype=torch.uint8)
+        self.state_ = torch.zeros(size=(memory_size, *state_size), dtype=torch.uint8)
         self.action = torch.zeros(memory_size, dtype=torch.int8)
-        self.reward = torch.zeros(memory_size, dtype=torch.float16)
+        self.reward = torch.zeros(memory_size, dtype=torch.int)
         self.terminal = torch.zeros(memory_size, dtype=torch.bool)
 
     def store_sars_(self, s, a, r, s_, done):
